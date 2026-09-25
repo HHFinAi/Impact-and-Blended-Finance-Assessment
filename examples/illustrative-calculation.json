@@ -1,0 +1,44 @@
+{
+  "id": "C1",
+  "operation": "loss_waterfall",
+  "arguments": {
+    "total_loss": 15000000,
+    "junior_capital": 10000000,
+    "mezzanine_capital": 20000000,
+    "senior_capital": 70000000
+  },
+  "currency": "USD",
+  "measurement_unit": "specified_outcome",
+  "input_unit": "percent",
+  "result_unit": "decimal",
+  "input_provenance": {
+    "total_loss": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "USD"
+    },
+    "junior_capital": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "USD"
+    },
+    "mezzanine_capital": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "USD"
+    },
+    "senior_capital": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "USD"
+    }
+  },
+  "result": {
+    "junior_loss": 10000000.0,
+    "mezzanine_loss": 5000000.0,
+    "senior_loss": 0.0,
+    "total_allocated_loss": 15000000.0,
+    "recoveries_after_loss": [
+      0.0,
+      15000000.0,
+      70000000.0
+    ]
+  },
+  "output_unit": "loss_allocation"
+}

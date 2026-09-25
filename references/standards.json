@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-09-25",
+  "standards": [
+    {
+      "id": "OPIM",
+      "title": "Operating Principles for Impact Management",
+      "url": "https://www.impactprinciples.org/9-principles/",
+      "source_date": "2026-09-25",
+      "checked_on": "2026-09-25",
+      "status": "VOLUNTARY_FRAMEWORK",
+      "can_apply_as_current_rule": false,
+      "note": "Nine principles; official page reviewed, not an assertion of certification. Enterprise outcomes and investor contribution remain separate.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    },
+    {
+      "id": "OECD-BLENDED",
+      "title": "OECD DAC Blended Finance Guidance 2025",
+      "url": "https://www.oecd.org/en/publications/oecd-dac-blended-finance-guidance-2025_e4a13d2c-en.html",
+      "source_date": "2025-09-22",
+      "checked_on": "2026-09-25",
+      "status": "GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "note": "Assessment covers additionality, concessionality where relevant, risk allocation, commercial sustainability and development outcomes. Mobilisation is not causal proof.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    },
+    {
+      "id": "UNGP",
+      "title": "OHCHR business and human rights framework",
+      "url": "https://europe.ohchr.org/areas-of-work/business-and-human-rights",
+      "source_date": "2026-09-25",
+      "checked_on": "2026-09-25",
+      "status": "INTERNATIONAL_FRAMEWORK_REFERENCE",
+      "can_apply_as_current_rule": false,
+      "note": "Current official overview checked; source-date is review date. Read the UNGP text and local law before legal application. Risks to people are distinct from financial exposure.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "agent": "impact-blended-finance-agent",
+  "routes": 3,
+  "stages": 11,
+  "operations": 9,
+  "checks": "PASS",
+  "remote_urls_checked": false
+}

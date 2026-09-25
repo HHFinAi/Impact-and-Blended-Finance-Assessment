@@ -1,0 +1,40 @@
+{
+  "agent": "impact-blended-finance-agent",
+  "version": "0.2.0",
+  "validated_on": "2026-09-25",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "unit_test_executions": 121,
+  "domain_unit_tests": 14,
+  "unit_tests": "PASS",
+  "schema_validations": 42,
+  "schema_validation": "PASS",
+  "routes": [
+    {
+      "route": "impact-investment",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 11,
+      "packet_digest": "718365b82ade4b9b535da750275157237e0b0eec19f7a5be5924976f53e7658f",
+      "execution_authorized": false
+    },
+    {
+      "route": "blended-finance",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 11,
+      "packet_digest": "a5543763e2a574fe8738948219600849e578439bf8af898fa8cb4c59a8ecc077",
+      "execution_authorized": false
+    },
+    {
+      "route": "outcome-linked",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 11,
+      "packet_digest": "516119bb2b2c5d2b34965b9603d3b3c8cf7d55956dd3229f0b7d6c964187aa73",
+      "execution_authorized": false
+    }
+  ],
+  "source_study_status": "NEEDS_DATA",
+  "live_research_performed": false,
+  "remote_github_actions_run": false,
+  "production_certification": false,
+  "repository_checks": "PASS"
+}

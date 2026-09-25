@@ -1,0 +1,465 @@
+{
+  "schema_version": "1.0",
+  "name": "impact-blended-finance-agent",
+  "title": "Impact and Blended-Finance Assessment Agent",
+  "owner": "HHFinAi",
+  "version": "0.2.0",
+  "default_route": "impact-investment",
+  "routes": {
+    "impact-investment": {
+      "title": "Impact Investment",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "additionality",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "structure",
+          "depends_on": [
+            "additionality"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "structure"
+          ]
+        },
+        {
+          "id": "measurement",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "measurement"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond",
+        "private-contract"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "blended-finance": {
+      "title": "Blended Finance",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "additionality",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "structure",
+          "depends_on": [
+            "additionality"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "structure"
+          ]
+        },
+        {
+          "id": "measurement",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "measurement"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "private-contract",
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "outcome-linked": {
+      "title": "Outcome Linked",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "additionality",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "structure",
+          "depends_on": [
+            "additionality"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "structure"
+          ]
+        },
+        {
+          "id": "measurement",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "measurement"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "private-contract",
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    }
+  },
+  "stages": {
+    "mandate": {
+      "id": "mandate",
+      "title": "Mandate and investable decision",
+      "required_sections": [
+        "decision_question",
+        "instrument_boundary",
+        "mandate_constraints"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/mandate.md",
+      "investment_gate": false
+    },
+    "evidence": {
+      "id": "evidence",
+      "title": "Evidence intake and reconciliation",
+      "required_sections": [
+        "source_register_review",
+        "boundary_reconciliation",
+        "material_gaps"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/evidence.md",
+      "investment_gate": false
+    },
+    "impact": {
+      "id": "impact",
+      "title": "Theory of change and beneficiaries",
+      "required_sections": [
+        "problem_baseline",
+        "counterfactual",
+        "outcomes_vs_outputs",
+        "negative_effects"
+      ],
+      "standard_ids": [
+        "OPIM",
+        "OECD-BLENDED"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/impact.md",
+      "investment_gate": false
+    },
+    "additionality": {
+      "id": "additionality",
+      "title": "Additionality and investor contribution",
+      "required_sections": [
+        "financial_additionality",
+        "nonfinancial_contribution",
+        "market_counterfactual",
+        "minimum_support"
+      ],
+      "standard_ids": [
+        "OECD-BLENDED",
+        "OPIM"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/additionality.md",
+      "investment_gate": false
+    },
+    "structure": {
+      "id": "structure",
+      "title": "Contracts and risk allocation",
+      "required_sections": [
+        "capital_stack",
+        "guarantees_and_recourse",
+        "fx_and_payment_risk",
+        "rights_and_safeguards"
+      ],
+      "standard_ids": [
+        "OECD-BLENDED",
+        "UNGP"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/structure.md",
+      "investment_gate": false
+    },
+    "valuation": {
+      "id": "valuation",
+      "title": "Financial and development economics",
+      "required_sections": [
+        "grant_equivalent",
+        "loss_waterfall",
+        "mobilisation_denominator",
+        "outcome_sensitivity"
+      ],
+      "standard_ids": [
+        "OECD-BLENDED",
+        "OPIM"
+      ],
+      "requires_calculation": true,
+      "prompt_path": "prompts/stages/valuation.md",
+      "investment_gate": false,
+      "allowed_operations": [
+        "loss_waterfall",
+        "grant_equivalent",
+        "mobilisation_ratio",
+        "additional_outcomes",
+        "cost_per_additional_outcome"
+      ]
+    },
+    "measurement": {
+      "id": "measurement",
+      "title": "Measurement and responsible exit",
+      "required_sections": [
+        "verification_plan",
+        "data_collection_rights",
+        "learning_and_adaptation",
+        "responsible_exit"
+      ],
+      "standard_ids": [
+        "OPIM"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/measurement.md",
+      "investment_gate": false
+    },
+    "market": {
+      "id": "market",
+      "title": "Market context and implementation evidence",
+      "required_sections": [
+        "market_or_contract_evidence",
+        "liquidity_funding_access",
+        "portfolio_context"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/market.md",
+      "investment_gate": false
+    },
+    "expression": {
+      "id": "expression",
+      "title": "Investment-decision handoff",
+      "required_sections": [
+        "valuation_and_entry",
+        "risk_catalysts_and_thesis_breakers",
+        "eligibility_review"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/expression.md",
+      "investment_gate": true
+    },
+    "challenge": {
+      "id": "challenge",
+      "title": "Independent challenge and exceptions",
+      "required_sections": [
+        "source_challenge",
+        "model_and_method_limits",
+        "material_issues"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/challenge.md",
+      "investment_gate": false
+    },
+    "memo": {
+      "id": "memo",
+      "title": "Investment committee and accountable review",
+      "required_sections": [
+        "investment_question_and_answer",
+        "financial_vs_sustainability_conclusions",
+        "evidence_and_calculations",
+        "decision_conditions_and_limits"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/memo.md",
+      "investment_gate": false,
+      "required_assessments": {
+        "enterprise_vs_investor_impact_separate": [
+          true
+        ],
+        "counterfactual_status": [
+          "supported",
+          "assumed",
+          "unknown"
+        ],
+        "mobilisation_is_causal_proof": [
+          false
+        ],
+        "guarantee_removes_all_risk": [
+          false
+        ],
+        "negative_impacts_considered": [
+          true
+        ]
+      }
+    }
+  },
+  "demo_operation": "loss_waterfall",
+  "demo_arguments": {
+    "total_loss": 15000000,
+    "junior_capital": 10000000,
+    "mezzanine_capital": 20000000,
+    "senior_capital": 70000000
+  },
+  "demo_assessment": "Fictional blended structure: first-loss protection redistributes losses; additionality and beneficiary outcomes still need evidence.",
+  "demo_domain_assessment": {
+    "enterprise_vs_investor_impact_separate": true,
+    "counterfactual_status": "assumed",
+    "mobilisation_is_causal_proof": false,
+    "guarantee_removes_all_risk": false,
+    "negative_impacts_considered": true
+  },
+  "capabilities": {
+    "embedded_llm": false,
+    "live_data": false,
+    "trade_execution": false,
+    "scheduler": false,
+    "external_communications": false,
+    "authenticated_human_identity": false
+  }
+}
