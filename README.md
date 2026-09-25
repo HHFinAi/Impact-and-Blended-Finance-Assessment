@@ -1,5 +1,7 @@
 # Impact and Blended-Finance Assessment Agent
 
+[![Validate research workflow](https://github.com/HHFinAi/Impact-and-Blended-Finance-Assessment/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Impact-and-Blended-Finance-Assessment/actions/workflows/validate.yml)
+
 **Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
 
 What additional outcomes and financing are plausibly created, who bears the risks, and is the investment commercially and developmentally defensible?
